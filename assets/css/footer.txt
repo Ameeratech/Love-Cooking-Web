@@ -1,0 +1,167 @@
+<style>
+/* #####  Footer  ##### */
+
+footer.main-footer {
+    background-color: #ffeedb;
+    z-index: 0;
+}
+
+footer p {
+    color: #777;
+}
+
+footer img {
+    height: 65px;
+    width: 90px;
+}
+
+footer a {
+    color: #fff;
+    font-family: "Cantarell", "Times New Roman", sans-serif;
+}
+
+footer a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+.logo-footer {
+    margin-bottom: 30px;
+}
+
+.footer-widget h4 {
+    color: #777;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-size: 15px;
+    position: relative;
+    z-index: 2;
+}
+
+.contact-widget ul.social-icons li {
+    display: inline-block;
+    margin-right: 18px;
+    margin-bottom: 4px;
+}
+
+.contact-widget ul.social-icons li a i {
+    font-size: 15px;
+    width: 25px;
+    height: 30px;
+    color: black;
+    display: block;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -o-border-radius: 2px;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+
+.contact-widget ul.social-icons li a:hover {
+    text-decoration: none;
+}
+
+.contact-widget ul.social-icons li a.facebook:hover i {
+    color: #507CBE;
+}
+
+
+.contact-widget ul.social-icons li a.instgram:hover i {
+    color: hotpink;
+}
+
+.contact-widget ul.social-icons li a.pintrest:hover i {
+    color: red;
+}
+
+
+
+.contact-widget span {
+    font-weight: 900;
+}
+
+.contact-widget ul li {
+    margin-bottom: 12px;
+}
+
+.contact-widget ul li p a {
+    color: #777;
+}
+
+.contact-widget p {
+    padding-bottom: 20px;
+}
+
+.twitter-widget a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+.twitter-widget ul li {
+    margin-bottom: 20px;
+}
+
+.twitter-widget ul li span {
+    color: #777;
+}
+
+.company-links a {
+    color: #777;
+}
+
+.company-links a:hover {
+    color: #ccc;
+}
+
+.copyright-section {
+    padding: 30px 0;
+    font-size: 15px;
+    border-top: 1px solid #131313;
+}
+
+.copyright-section p {
+    font-size: 15px;
+    text-align: center;
+    right:30px;
+
+}
+
+
+@media (max-width: 992px) {
+    footer.main-footer * {
+        text-align: center;
+    }
+    footer.main-footer ul.social-icons {
+        left: 30px width: 100%;
+        text-align: center;
+    }
+    ul.social-icons {
+        left: 30px width: 100%;
+        text-align: center;
+    }
+    footer.main-footer nav.footer-nav ul li {
+        text-align: center;
+        width: 100%;
+    }
+    footer.main-footer nav.footer-nav ul li,
+    footer.main-footer nav.footer-nav ul li:first-child {
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+
+    footer.main-footer {
+        padding: 0;
+    }
+
+    footer.main-footer * {
+        text-align: left;
+    }
+}
+</style>

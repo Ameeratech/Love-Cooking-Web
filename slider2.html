@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="carnaval/bootstrap.min.css">
+
+ <link rel="stylesheet" href="create.css">
+ <title>Document</title>
+ <style>
+  body {
+   background: silver;
+  }
+
+  header {
+   min-height: 48px;
+   background: white;
+   display: flex;
+   align-items: center;
+  }
+
+  header nav {
+   text-align: center;
+   display: flex;
+   justify-content: center;
+  }
+
+  header nav a {
+   font-size: 1.2em;
+   padding: 0 12px;
+   color: #444;
+  }
+
+  header nav a:hover {
+   text-decoration: none;
+  }
+
+  /* מייצר תוכן לפני התגית */
+  header nav a::before {
+   content: "";
+   display: block;
+   width: 0;
+   height: 2px;
+   background: #444;
+   transition: 0.8s;
+   margin: 0 auto;
+   opacity: 0;
+  }
+
+  header nav a:hover::before {
+   content: "";
+   display: block;
+   width: 100%;
+   height: 2px;
+   background: #444;
+   opacity: 1;
+  }
+
+
+  /* מייצר תוכן אחריי התגית */
+  header nav a::after {
+   content: "";
+   display: block;
+   width: 0;
+   height: 4px;
+   background: #444;
+   transition: 0.8s;
+   margin: 0 auto;
+   opacity: 0;
+  }
+
+  header nav a:hover::after {
+   content: "";
+   display: block;
+   width: 100%;
+   height: 4px;
+   background: #444;
+   opacity: 1;
+  }
+
+
+
+
+
+  /* 991 בגלל שזה אל ג'י */
+  @media screen and (max-width:991px) {
+   nav {
+    position: absolute;
+    top: 60px;
+    background: rgba(255, 255, 255, 0.651);
+    width: 100%;
+    left: 0;
+    /* מבטל כדי שלא יוצג על ההתחלה , ומשתמשים בו בשביל
+    בדיקה איך התפריט נראה כאשר הוא פתוח במובייל */
+    /* display: block !important; */
+   }
+
+   .burger {
+    cursor: pointer;
+   }
+  }
+ </style>
+</head>
+
+<body>
+ <header class="container-fluid">
+  <div class="container">
+   <nav class="d-none d-lg-flex" id="id_nav">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Gallery</a>
+    <a href="#">Contact us</a>
+   </nav>
+   <div class="burger h1 d-block d-lg-none" id="nav_btn">
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+     <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+    </svg>
+   </div>
+  </div>
+ </header>
+
+ <script>
+  // BTN = ההמבורגע שיקבל את האיי די
+  var btn = document.querySelector("#nav_btn");
+  // THENAV = התפריט ניווט שיקבל את ה איי די
+  var theNav = document.querySelector("#id_nav");
+
+
+
+  btn.addEventListener("click", function() {
+   console.log("work")
+   // בודק אם התפריט מוצג ואם לא מציג ואם כן מסתיר
+   if (theNav.style.display != "block") {
+    theNav.style.display = "block";
+    // שורות שיש להוסיף אם עובדים עם בוטסטראפ
+    // אם התפריט צריך להיות רק מאם די אז צריך לשנות את 
+    // אל ג'י ל אם די
+    theNav.className = "d-block d-lg-flex"
+    // alert("check")
+   } else {
+    theNav.style.display = "none"
+    // שורות שיש להוסיף אם עובדים עם בוטסטראפ
+    // אם התפריט צריך להיות רק מאם די אז צריך לשנות את 
+    // אל ג'י ל אם די
+    theNav.className = " d-lg-flex"
+   }
+  })
+ </script>
+</body></html>
